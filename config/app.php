@@ -156,6 +156,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Jcf\Geocode\GeocodeServiceProvider::class,
+
     ],
 
     /*
@@ -202,6 +204,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Geocode' => Jcf\Geocode\Facades\Geocode::class,
     ],
 
 ];

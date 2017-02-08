@@ -52,34 +52,10 @@
                     <h2>AGENTS</h2>
                 </div>
             </div>
-            <div class="row row-file">
-                <div class="col-xs-12">
-                    <div class="row">
-                        <form action="cargarCatastro" method="post" enctype="multipart/form-data" id="catastro">
-                            <div class="col-xs-12 col-sm-6">
-                                <div id="files" class="files">
-                                    <div>
-                                        <p>
-                                            <span id="fileName">File chooser</span>
-                                            <button type="button" class="btn btn-blue btn-upload-server-catastro" value="CARGAR">CARGAR</button>
-                                        </p>
-                                    </div>
-                                </div>
-                             </div>
-                             <div class="col-xs-12 col-sm-3">
-                                <div class="btn btn-blue btn-block fileinput-button btn-load-file">
-                                    <span class="btn-icon3"></span>
-                                    SELECCIONAR
-                                    <input id="file" type="file" name="fileToUpload">
-                                </div>
-                             </div>
-                        </form> 
-                    </div>
-                </div>
-            </div>
         </div>
         <div id="zipcode" class="grl-form clearfix zipcode">
             <div class="panel-content-3" style>   
+            <input type="hidden" name="_token" id="_token"  value="<?= csrf_token(); ?>">
                 <form id="form-zipcode" class="grl-form clearfix form-zipcode">
                     <div class="panel-body">
                         <div class="col-xs-12 col-sm-12">
@@ -114,9 +90,7 @@
                 </form>
 
                 <form action="obtenerLatLon" method="post" enctype="multipart/form-data" id="catastro">
-                    <select class="input es1" id="rna6" name="rna6" type="text" step="any" lang="en">
-                                    <option value="">Seleccione una semana</option>
-                                </select>
+                    <textarea class="input es1" id="rna8" name="rna8" type="text" step="any" lang="en" rows="4" cols="50"></textarea> 
                 </form>
                 
                 <div id="mensaje"></div>
